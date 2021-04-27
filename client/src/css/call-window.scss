@@ -1,0 +1,314 @@
+.call-window.desktop {
+	font-family: 'Heebo', 'sans-serif';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 90vh;
+	opacity: 0;
+	z-index: -1;
+	background-color: #fff;
+
+	&.agent {
+		height: 100vh;
+	}
+	
+	&.active {
+		opacity: 1;
+		z-index: auto;
+	}
+	
+	.video-control {
+		position: absolute;
+		bottom: 20px;
+		height: 72px;
+		width: 60%;
+		left: 20%;
+		text-align: center;
+		z-index: 500;
+	}
+
+	.video-control.agent-video-control {
+		top: 80%;
+		width: 40%;
+		left: 30%;
+	}
+	
+	video {
+		position: absolute;
+	}
+	
+	#localVideo {
+		bottom: 0;
+		right: 0;
+		width: 20%;
+		height: 20%;
+		z-index: 100;
+	}
+	
+	#peerVideo {
+		width: 100%;
+		height: 100%;
+	}
+
+	#peerVideo.agent-peer-video {
+		top: 0;
+		left: 30%;
+		width: 40%;
+		height: 100%;
+	}
+
+	.accordion {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 30%;
+		height: 100%;
+		color: #000;
+		padding: 2rem;
+		font-size: .9rem;
+
+		.panel-details {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.MuiExpansionPanelSummary-root {
+			background-color: navy;
+			color: #fff;
+		}
+	}
+
+	.card-container {
+		padding: 2rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 60%;
+		width: 30%;
+
+		&-navigation {
+			font-size: 2rem;
+			color: #000;
+			cursor: pointer;
+			&.disabled {
+				color: rgba(0,0,0,.4);
+				cursor: default;
+			}
+		}
+
+		.card-button {
+			display: block;
+			margin-top: 1rem;
+			width: 60%;
+			font-size: .8em;
+			height: auto;
+		}
+
+		.review-text {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+
+		.question {
+			display: flex;
+			flex-direction: column;
+		}
+		.questions-actions {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.face-capture {
+		padding: 2rem;
+		position: absolute;
+		top: 30%;
+		right: 0;
+		width: 30%;
+		height: 30%;
+		display: flex;
+		flex-direction: column;
+		button {
+			background: transparent;
+			border: 1px solid #fff;
+			border-radius: 5px;
+			width: 40%;
+		}
+	}
+
+	.submission {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: 50%;
+		width: 30%;
+		button {
+			background: transparent;
+			border: 1px solid #fff;
+			border-radius: 5px;
+		}
+	}
+}
+
+.call-window.mobile {
+	display: block;
+	font-family: 'Heebo', 'sans-serif';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 90vh;
+	opacity: 0;
+	z-index: 0;
+	background-color: #fff;
+	
+	&.active {
+		opacity: 1;
+		z-index: auto;
+	}
+
+	.video-control {
+		position: absolute;
+		top: 38%;
+		height: 72px;
+		width: fit-content;
+		left: 0;
+		right: 0;
+		margin: auto;
+		display: block;
+		text-align: center;
+		z-index: 500;
+	}
+
+	video {
+		position: absolute;
+	}
+
+	#peerVideo {
+		top: 0;
+		left: 0;
+		height: 50%;
+	}
+
+	.tabs-container {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50%;
+		overflow-y: scroll;
+
+		.tab-content {
+			margin-top: 2rem;
+		}
+	}
+
+	.accordion {
+		color: #000;
+		padding: 2rem;
+		font-size: .9rem;
+
+		.panel-details {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.MuiExpansionPanelSummary-root {
+			background-color: navy;
+			color: #fff;
+		}
+	}
+
+	.card-container {
+		padding: 2rem;
+		width: 100%;
+		position: absolute;
+
+		&-navigation {
+			font-size: 2rem;
+			color: #000;
+			cursor: pointer;
+			&.disabled {
+				color: rgba(0,0,0,.4);
+				cursor: default;
+			}
+		}
+
+		h4 {
+			margin-top: 0 !important;
+			margin-bottom: 10px !important;
+		}
+
+		.card-button {
+			display: block;
+			margin-top: 1rem;
+			width: 60%;
+			font-size: .8em;
+			height: auto;
+		}
+
+		.review-text {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+
+		.question {
+			display: flex;
+			flex-direction: column;
+		}
+		.questions-actions {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+
+@include keyframes(in-fadeout) {
+	0% {opacity: 1}
+	75% {opacity: 1}
+	100% {opacity: 0}
+}
+
+.video-control, .call-modal {
+	.btn-action {
+		$height: 50px;
+		height: $height;
+		width: $height;
+		line-height: $height;
+		margin: 0px 8px;
+		font-size: 1.4em;
+		text-align: center;
+		border-radius: 50%;
+		cursor: pointer;
+		transition-duration: 0.25s;
+		
+		&:hover {
+			opacity: 0.8;	
+		}
+		
+		&.hangup {
+			background-color: $red;
+			@include transform(rotate(135deg));
+		}
+		
+		&:not(.hangup) {
+			background-color: $blue;
+			
+			&.disable {
+				background-color: $red;
+			}
+		}
+
+		&.yellow {
+			background-color: $yellow;
+		}
+		&.green {
+			background-color: $green;
+		}
+	}
+}

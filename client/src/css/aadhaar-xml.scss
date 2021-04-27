@@ -1,0 +1,187 @@
+.aadhaar-xml {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 10vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // font-family: 'Poppins-Regular';
+  .header-container {
+    margin-bottom: 2rem;
+    .aadhaar-logo {
+      width: 100px;
+    }
+  }
+  .form {
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 9px 0 15px -4px #eee, -9px 0 8px -4px #eee;
+    width: 40%;
+    height: 70%;
+    display: flex;
+    margin-top: -10vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 3rem;
+    color: #000;
+
+    .success-gif {
+      height: 60px;
+    }
+    .input-group {
+      width: 100%;
+      margin-bottom: 1rem;
+      position: relative;
+      display: flex;
+      padding: 1em;
+      justify-content: center;
+      flex-direction: column;
+      .view-icon-box {
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        width: 2rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .view-icon {
+          width: 2rem;
+          height: 2rem;
+          cursor: pointer;
+        }
+      }
+
+      .terms-icon {
+        color: #000;
+      }
+
+      .terms-box {
+        display: flex;
+        align-items: center;
+        .terms-link {
+          color: blue;
+          cursor: pointer;
+          margin-left: .5rem;
+        }
+      }
+
+      &.btn-group {
+        display: flex;
+        justify-content: center;
+        button {
+          display: block;
+          width: 200px;
+          padding: 10px;
+          margin: 1rem auto 0;
+          border: none;
+          border-radius: 20px;
+          font-size: 14px;
+          font-weight: 600;
+          color: #fff;
+          outline: none;
+        }
+      }
+      .submit-btn {
+        display: block;
+        width: 200px;
+        padding: 10px;
+        margin: 0 auto 0;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        outline: none;
+      }
+      &.captcha-input-group {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        .captcha-input {
+          width: 60%;
+          height: 40px;
+        }
+        .captcha {
+          width: 100px;
+          height: 40px;
+
+          &.loading {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .refresh-icon-box {
+          width: 2rem;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .refresh-icon {
+            height: 2rem;
+            width: 2rem;
+            cursor: pointer;
+          }
+        }
+      }
+      &.otp-input-group {
+        display: flex;
+        align-items: flex-end;
+        height: 3rem;
+      }
+
+      &.terms-group {
+        flex-direction: row;
+        margin-bottom: 0;
+      }
+
+      .otp-input-digit {
+        padding: 0;
+        width: 80% !important;
+      }
+
+      .otp-input {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .resend-btn {
+        background: transparent;
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 5px;
+        // height: 2rem;
+        width: 100%;
+        padding: .5rem 0;
+        margin: 1em 0;
+        font-size: 1.05em;
+      }
+      input {
+        width: 100%;
+        padding: 5px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #000;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .form {
+      padding: 2rem 1rem;
+      .input-group {
+        input {
+          font-size: 1.2rem;
+        }
+      }
+      width: 90%;
+      .terms-box {
+        flex-direction: column;
+      }
+    }
+  }
+}

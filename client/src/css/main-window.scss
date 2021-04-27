@@ -1,0 +1,84 @@
+.main-window {
+	padding-top: 80px;
+	font-size: 1.75em;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	background-image: linear-gradient(to bottom right,rgba(0,0,0,.6),rgba(0,0,0,.6)), url('../assets/call-bg.jpeg');
+	background-size: cover;
+
+	.greeting {
+		font-size: 3rem;
+	}
+
+	.call-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 5rem;
+		border: 1px solid #fff;
+		border-radius: 25px;
+		padding: 2rem;
+	}
+
+	.friendid-field {
+		margin: 2rem;
+		input, label {
+			color: #fff;
+			font-size: 1.5rem;
+		}
+		.MuiInput-underline:before {
+			border-bottom: 1px solid #fff; 
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		padding-top: 40px;
+
+		.pull-left, .pull-right {
+			width: 100%;
+			text-align: center;
+		}
+
+		.pull-right {
+			margin-top: 20px;
+		}
+	}
+
+	.btn-action {
+		height: 50px;
+		width: auto;
+		line-height: 50px;
+		text-align: center;
+		border-radius: 10px;
+		border: solid 2px #fff;
+		cursor: pointer;
+		transition-duration: 0.25s;
+		background-color: transparent;
+		font-size: 1.5rem;
+		span {
+			margin-left: 1rem;
+		}
+
+		&:hover {
+			background-color: rgba($main-color, 0.2);
+		}
+	}
+
+	.txt-clientId {
+		height: 40px;
+		margin: 40px auto 0px 10px;
+		color: $main-color;
+		font-size: 0.9em;
+		background-color: transparent;
+		border: none;
+		border-bottom: solid 1px $main-color;
+		@include input-placeholder(rgba($main-color, 0.8));
+	}
+
+}
+
